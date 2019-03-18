@@ -1,28 +1,8 @@
 import React from 'react';
-import { StyleSheet ,Text, View } from 'react-native';
+import Layout from './src/Layout';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center'
-      }}>
-        <Text style={styles.bigBlue}>Hello, world!</Text>
-      </View>
-    );
+const App = () => {
+    return <Layout />
   }
-}
 
-const styles = StyleSheet.create({
-  bigBlue: {
-    color: 'blue',
-    fontWeight: 'bold',
-    fontSize: 30,
-    textAlign: 'center'
-  },
-  red: {
-    color: 'red',
-  },
-});
+export default App;
