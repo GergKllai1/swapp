@@ -1,8 +1,19 @@
 import React from 'react';
-import Layout from './src/Layout';
+import Characters from './src/Characters';
+import { createStackNavigator, createAppContainer } from "react-navigation";
 
-const App = () => {
-    return <Layout />
-  }
+import CharacterDetails from './src/CharacterDetails'
 
-export default App;
+const App = createStackNavigator({
+  Characters: {
+    screen: Characters,
+  },
+  CharacterDetails: {
+    screen: CharacterDetails,
+  },
+}, {
+    initialRouteName: 'Characters',
+});
+
+
+export default createAppContainer(App);
