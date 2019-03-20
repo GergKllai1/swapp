@@ -2,16 +2,19 @@ import React from 'react'
 import { StyleSheet , View } from 'react-native';
 import Characters from './Characters';
 
-const Layout = props => {
-  return (
-    <View style={{ 
-      flex: 1, 
-      justifyContent: 'center', 
-      alignItems: 'center',
-      marginTop: 30}}>
-        <Characters style={styles.bigBlue} />
-    </View>
-  )
+class Layout extends React.Component {
+
+  render (){
+    return (
+      <View style={{ 
+        flex: 1, 
+        justifyContent: 'center', 
+        alignItems: 'center',
+        marginTop: 30}}>
+          <Characters navigation = {this.props.navigation}  style={styles.bigBlue} />
+      </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({

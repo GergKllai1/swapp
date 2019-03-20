@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 12627,
-  "expoServerNgrokUrl": "https://xg-892.anonymous.swapi-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.xg-892.anonymous.swapi-app.exp.direct",
-  "ngrokPid": 12715,
+  "packagerPort": 19003,
+  "packagerPid": 26446,
+  "expoServerNgrokUrl": "https://yz-t3e.anonymous.swapp.exp.direct",
+  "packagerNgrokUrl": "https://packager.yz-t3e.anonymous.swapp.exp.direct",
+  "ngrokPid": 26521,
   "webpackServerPort": null
 }

@@ -5,7 +5,7 @@ const CharacterDetails = props => {
   return (
    <View>
        <Text>
-
+          Hello {props.name}
        </Text>
    </View>
   )

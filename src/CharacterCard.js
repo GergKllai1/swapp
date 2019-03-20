@@ -1,15 +1,19 @@
 import React from 'react'
 import { Button, View } from 'react-native'
 
-const CharacterCard = (props) => {
-  return (
-    <View style={{ marginBottom : 20 }}>
-        <Button 
-        title={props.character.name}
-        />
-    </View>
-  )
-}
+class CharacterCard extends React.Component {
 
+  render(){
+    return (
+      <View style={{ marginBottom : 20 }}>
+          <Button 
+          title={this.props.character.name}
+          onPress={() => this.props.navigation.navigate('CharacterDetails',{name: "Hello"})}
+          />
+      </View>
+    )
+  }
+  
+}
 
 export default CharacterCard
