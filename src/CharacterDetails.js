@@ -5,7 +5,7 @@ const CharacterDetails = props => {
   return (
    <View>
        <Text>
-          Hello {props.name}
+          Hello {props.navigation.state.params.character.name}
        </Text>
    </View>
   )

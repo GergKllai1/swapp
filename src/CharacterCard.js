@@ -8,7 +8,7 @@ class CharacterCard extends React.Component {
       <View style={{ marginBottom : 20 }}>
           <Button 
           title={this.props.character.name}
-          onPress={() => this.props.navigation.navigate('CharacterDetails',{name: "Hello"})}
+          onPress={() => this.props.navigation.navigate('CharacterDetails',{character: this.props.character})}
           />
       </View>
     )
