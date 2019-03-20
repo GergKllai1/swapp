@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { ScrollView } from 'react-native'
 import axios from 'axios'
 import CharacterCard from './CharacterCard';
 
@@ -19,12 +19,12 @@ export class Characters extends Component {
     }
   render() {
     const CharacterDisplay = this.state.characters.map(character => {
-        return <CharacterCard character = {character} />
+        return <CharacterCard  character = {character} />
     })
     return (
-      <View>
+      <ScrollView>
         {CharacterDisplay}
-      </View>
+      </ScrollView>
     )
   }
 }
