@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView } from 'react-native'
+import { View, ScrollView, StyleSheet } from 'react-native'
 import axios from 'axios'
 import CharacterCard from './CharacterCard';
 
@@ -19,14 +19,31 @@ export class Characters extends Component {
     }
   render() {
     const CharacterDisplay = this.state.characters.map(character => {
-        return <CharacterCard navigation = {this.props.navigation} character = {character} />
+        return <CharacterCard key={character.name} navigation = {this.props.navigation} character = {character} />
     })
     return (
-      <ScrollView>
+      <ScrollView style={styles.bigBlue}>
+        <View style={styles.position}>
         {CharacterDisplay}
+        </View>
       </ScrollView>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  bigBlue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+    textAlign: 'center'
+  },
+  position: {
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    marginTop: 30
+  },
+});
 
 export default Characters

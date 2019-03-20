@@ -1,24 +1,18 @@
 import React from 'react';
-import Layout from './src/Layout';
+import Characters from './src/Characters';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
 import CharacterDetails from './src/CharacterDetails'
 
-
-
-// const App = () => {
-//     return <Layout />
-//   }
-
 const App = createStackNavigator({
-  Layout: {
-    screen: Layout,
+  Characters: {
+    screen: Characters,
   },
   CharacterDetails: {
     screen: CharacterDetails,
   },
 }, {
-    initialRouteName: 'Layout',
+    initialRouteName: 'Characters',
 });
 
 
