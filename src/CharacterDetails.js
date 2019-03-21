@@ -17,4 +17,5 @@ const CharacterDetails = props => {
   )
 }
 
+
 export default CharacterDetails

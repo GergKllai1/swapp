@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing ReassignLocationMenu component renders as expected 1`] = `
+<ScrollViewMock
+  style={
+    Object {
+      "color": "blue",
+      "fontSize": 30,
+      "fontWeight": "bold",
+      "textAlign": "center",
+    }
+  }
+>
+  <Component
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "marginTop": 30,
+      }
+    }
+  >
+    <CharacterCard
+      character={
+        Object {
+          "name": "Anders",
+        }
+      }
+      key="Anders"
+    />
+  </Component>
+</ScrollViewMock>
+`;
