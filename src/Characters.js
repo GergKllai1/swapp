@@ -19,10 +19,10 @@ export class Characters extends Component {
     }
   render() {
     const CharacterDisplay = this.state.characters.map(character => {
-        return <CharacterCard key={character.name} navigation = {this.props.navigation} character = {character} />
+        return <CharacterCard testID={character.name} key={character.name} navigation = {this.props.navigation} character = {character} />
     })
     return (
-      <ScrollView style={styles.bigBlue}>
+      <ScrollView testID='main' style={styles.bigBlue}>
         <View style={styles.position}>
         {CharacterDisplay}
         </View>
