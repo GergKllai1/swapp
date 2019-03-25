@@ -4,17 +4,40 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "start:appium": "appium",
+		"test:e2e": "jest --testMatch=\"**/__tests__/**/*e2e.js\"",
+		"test:e2e:android": "E2E_DEVICE=\"android-emulator\" yarn run test:e2e",
+		"test:e2e:ios": "E2E_DEVICE=\"ios-emulator\"  yarn run test:e2e"
   },
   "dependencies": {
+    "appium": "^1.12.0",
     "axios": "^0.18.0",
     "expo": "^32.0.0",
+    "jest": "^24.5.0",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
-    "react-navigation": "^3.4.1"
+    "react-navigation": "^3.4.1",
+    "react-test-renderer": "^16.8.5",
+    "wd": "^1.11.1"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
   },
+  "e2e": {
+		"devices": {
+			"ios-emulator": {
+				"platformName": "iOS",
+				"platformVersion": "10.3",
+				"deviceName": "iPhone Simulator",
+				"app": "./ios/build/Build/Products/Release-iphonesimulator/e2etest.app"
+			},
+			"android-emulator": {
+				"platformName": "Android",
+				"deviceName": "Android Emulator",
+				"app": "./android/swapp.apk"
+			}
+		}
+	},
   "private": true
 }
