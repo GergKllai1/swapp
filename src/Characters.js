@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, ScrollView, StyleSheet } from 'react-native'
+import { View, ScrollView, StyleSheet, Text } from 'react-native'
 import axios from 'axios'
 import CharacterCard from './CharacterCard';
 
@@ -24,6 +24,7 @@ export class Characters extends Component {
     return (
       <ScrollView style={styles.bigBlue}>
         <View style={styles.position}>
+        <Text accessibilityLabel="welcome">Characters:</Text>
         {CharacterDisplay}
         </View>
       </ScrollView>
